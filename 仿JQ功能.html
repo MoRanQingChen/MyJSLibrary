@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		.class1{
+			background-color: #ccc
+		}
+		.class4{
+			background-color: red;
+		}
+		.blue{
+			background-color: blue;
+		}
+	</style>
+	<ul>
+		<li class="class1">0</li>
+		<li class="class1 class2">1</li>
+		<li class="class1 class2 class3">2</li>
+		<li class="class5 class2">3</li>
+		<li id="test">4</li>
+		<li class="class7 class2">5</li>
+		<li class="class7 class1">6</li>
+	</ul>
+	<div class="test havetry" id="test2" style="width: 100px;height:100px;border:1px solid red">
+		<div class="inner" style="width: 50px;height:50px">
+			
+		</div>
+	</div>
+	<script src="./moran.js"></script>
+	<script>
+//		自己拓展了一些好玩的东西.有bug或者有更好的优化群里讨论或者和我讨论都可以!
+		var oLis=document.getElementsByTagName("li");
+		oLis[5].addClass("class4");//添加和删除样式
+		//------------------------------------------------------------------------------------
+		oLis[2].removeClass("class2");
+		//------------------------------------------------------------------------------------
+		for (var i = 0; i < oLis.length; i++) {
+			oLis[i].onclick=function() {
+				alert(this.index());//内部访问不到i,直接用index()
+			}
+		}
+		//-----------------------------------------------------------------------------------
+		$('.class2 .class5').innerHTML="这里是.class2 .class5"
+		$('.class7')[0].innerHTML="我是第一个有class7的"
+		$('.class7')[1].innerHTML="我是第二个有class7的"
+		$('#test').style.background="orange"//找到ID为test的,把背景变成橙色
+		$('.class2 .class5').innerHTML="这里是.class2 .class5"
+
+		$('.test .havetry').addClass('blue');
+		$('.test .havetry').removeClass('test')
+	</script>
+</body>
+</html>
