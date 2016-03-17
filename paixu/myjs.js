@@ -1,6 +1,4 @@
-function getInfo() {
-    document.getElementsByTagName("input")[0].style.display="none";
-    var xhr=new XMLHttpRequest();
+ var xhr=new XMLHttpRequest();
     var data=[];
     xhr.onreadystatechange= function () {
         if(xhr.readyState==4&&/^2\d\d$/.test(xhr.status)){
@@ -17,6 +15,7 @@ function getInfo() {
         oTr.innerHTML="<td>"+data[i].name+"</td><td>"+data[i].age+"</td><td>"+data[i].val+"</td><td>"+data[i].sex+"</td>"
         fag.appendChild(oTr);
     }
+window.onload=function(){
     var oTb=document.getElementsByTagName("tbody")[0];
     oTb.appendChild(fag);
     var oTh=document.getElementsByTagName("th");
