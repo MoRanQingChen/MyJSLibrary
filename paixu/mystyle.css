@@ -1,0 +1,23 @@
+#container{
+    width: 400px;
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px #333;
+    margin: 20px auto;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+th{
+    background: #738ba3;
+    cursor: pointer;
+}
+tbody>tr:nth-child(even){
+    background: #ffe5fa;
+}
+tbody>tr:nth-child(odd){
+    background: #ddd6ff;
+}

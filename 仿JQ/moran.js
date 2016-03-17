@@ -70,7 +70,7 @@
 		//小拓展二:用正则做,如果要移除的class在中间的话,可能会连同空格移除导致前后连起来所以注意replace的回调
 		var oLis=document.getElementsByTagName("li");
 		HTMLElement.prototype.removeClass=function(str){
-			var reg=new RegExp("(^| +)"+str+"( +|$)","g");
+			var reg=new RegExp("(\\b| +)"+str+"( +|\\b)","g");//注意转义字符
 			this.className=this.className.replace(reg,function(a,b,c){
 				return b&&c&&" ";
 			});
