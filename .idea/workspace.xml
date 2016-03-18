@@ -51,11 +51,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/笔记/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36585367">
+            <state vertical-scroll-proportion="-7.0">
               <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DOM节点层次.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/笔记/DOM节点层次.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.333334">
+              <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="false-布尔及判断总复习.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/笔记/false-布尔及判断总复习.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.733334">
+              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function再复习.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/笔记/function再复习.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.733334">
+              <caret line="328" column="28" selection-start-line="328" selection-start-column="28" selection-end-line="328" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaScript基本的包装类型.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/笔记/JavaScript基本的包装类型.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9268293">
+              <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,26 +121,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="仿JQ功能.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/仿JQ/仿JQ功能.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="moran.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/仿JQ/moran.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="72" column="70" selection-start-line="72" selection-start-column="70" selection-end-line="72" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -116,6 +136,10 @@
         <option value="$PROJECT_DIR$/paixu/myjs.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/笔记/README.md" />
+        <option value="$PROJECT_DIR$/笔记/DOM节点层次.md" />
+        <option value="$PROJECT_DIR$/笔记/false-布尔及判断总复习.md" />
+        <option value="$PROJECT_DIR$/笔记/function再复习.md" />
+        <option value="$PROJECT_DIR$/笔记/JavaScript基本的包装类型.md" />
       </list>
     </option>
   </component>
@@ -388,8 +412,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/笔记/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36585367">
+        <state vertical-scroll-proportion="-7.0">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔记/DOM节点层次.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.333334">
+          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔记/false-布尔及判断总复习.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.733334">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔记/function再复习.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.733334">
+          <caret line="328" column="28" selection-start-line="328" selection-start-column="28" selection-end-line="328" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔记/JavaScript基本的包装类型.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9268293">
+          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
           <folding />
         </state>
       </provider>
