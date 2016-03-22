@@ -37,3 +37,28 @@
 		1.到了边界要清setInterval
 		2.浮点数要修正终点
 		3.动画积累*/
+
+
+		//------------------------------------------------------
+		//减速运动 . 加速减速什么的都是纸老虎,只改一行公式,看图片
+		function toSlow(ele,attr,target,during){
+			clearInterval(ele.timer)
+			var begin=parseFloat(getComputedStyle(ele)[attr])||0;
+			var road=(target-begin);
+			var interval=15;
+			var time=0; 
+			console.log(begin)
+			console.log(begin)
+			function pass(){
+				time+=interval;
+				if(time<during){
+					ele.style[attr]=begin+Math.pow((time/during),.5)*road+"px";
+					// begin=parseFloat(ele.style[attr]);
+				}else{
+					ele.style[attr]=target+"px"
+					clearInterval(ele.timer)
+				}
+			}
+			ele.timer=setInterval(pass,interval);
+		}
+		//------------------------------------------------------

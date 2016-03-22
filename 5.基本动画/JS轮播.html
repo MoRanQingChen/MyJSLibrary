@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播</title>
+</head>
+<body>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#div1{
+		width: 600px;
+		height: 300px;
+		border:1px solid red;
+		overflow: hidden;
+	}
+	#inner{
+		width: 2400px;
+		height: 300px;
+	}
+	#inner>li{
+		list-style: none;
+		display: block;
+		width: 600px;
+		height: 300px;
+		float: left;
+		font-size: 30px;
+		color: white;
+	}
+	#inner>li:nth-child(1){
+		background-color: red;
+	}
+	#inner>li:nth-child(2){
+		background-color: orange;
+	}
+	#inner>li:nth-child(3){
+		background-color: green;
+	}
+	#inner>li:nth-child(4){
+		background-color: blue;
+	}
+	#point{
+		margin:0 auto;
+	}
+	#point>li{
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		background-color: orange;
+		cursor: pointer;
+		color: #fff;
+		text-align: center;
+		line-height: 40px;
+	}
+</style>
+<div id="div1">
+	<ul id="inner">
+		<li>111111111111111111111</li>
+		<li>222222222222222222</li>
+		<li>333333333333333333</li>
+		<li>444444444444444444</li>
+	</ul>
+</div>
+<ul id="point">
+	<li style="background-color: red">1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+</ul>
+	<script src="./animate.js"></script>
+	<script>
+		//用刚才的animate很容易做一个轮播
+		var oLis=document.getElementById("point").getElementsByTagName("li");
+		for(var i=0;i<oLis.length;i++){
+			oLis[i].onclick=(function(i) {
+				return function() {
+					for (var j = 0; j < oLis.length; j++) {
+						oLis[j].style.backgroundColor="orange"
+					}
+					this.style.backgroundColor="red"
+					animate(inner,"marginLeft",-i*600,500)//调用上面的animate方法
+				}
+			})(i)
+		}
+		setInterval(function() {
+			oLis[++count%oLis.length].onclick();
+		},3000)
+	</script>
+</body>
+</html>
