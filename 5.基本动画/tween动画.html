@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		#div1,#div2{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			position: absolute;
+			left: 600px;
+			opacity: 1;
+		}
+		#div2{
+			background-color:blue;
+			top: 200px;
+		}
+		#orangeLeft,#orangeRight,#blueLeft,#blueRight{
+			width: 100px;
+			height: 50px;
+			background-color: orange;
+			top: 360px;
+			position: absolute;
+			cursor: pointer;
+		}
+		#blueLeft,#blueRight{
+			background-color:blue;
+			top: 430px;
+		}
+		#orangeLeft,#blueLeft{
+			left: 300px;
+		}
+		#orangeRight,#blueRight{
+			left: 900px;
+		}
+	</style>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="orangeLeft">orangeLeft</div>
+	<div id="orangeRight">orangeRight</div>
+	<div id="blueLeft">blueLeft</div>
+	<div id="blueRight">blueRight</div>
+	<script src="./animate.js"></script>
+	<script>
+		div1.onclick=function () {
+			
+			animate(div1,"opacity",0,1000)
+		}
+		blueLeft.onclick=function(argument) {
+			animate(div2,"left",0,1000)
+		}
+		blueRight.onclick=function(argument) {
+			animate(div2,"left",1200,1000)
+		}
+		//含回调
+		orangeLeft.onclick=function(argument) {
+			div1.style.backgroundColor="orange";
+			animate(div1,"left",0,1000,function() {
+				div1.style.backgroundColor="red";
+			})
+		}
+		orangeRight.onclick=function(argument) {
+			div1.style.backgroundColor="orange";
+			animate(div1,"left",1200,1000,function() {
+				div1.style.backgroundColor="red";
+			})
+		}
+		
+	</script>
+</body>
+</html>
