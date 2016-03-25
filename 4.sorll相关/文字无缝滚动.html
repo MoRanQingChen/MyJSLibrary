@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>文字无缝滚动</title>
+    <meta charset="UTF-8">
+    <title>文字无缝滚动</title>
 </head>
 <style>
-	#news{
-		position: relative;
-		white-space: nowrap;
-		width: 300px;
-		height: 40px;
-		overflow :hidden;
-		cursor: pointer;
-	}
+#txt_box {
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    width: 300px;
+    overflow :hidden;
+    /*overflow: auto;*/
+    cursor: pointer;
+}
 </style>
-<body>
-	<div id="news">
-	习近平指出，筹办北京冬奥会、冬残奥会，为推动京津冀协同发展提供了良好机遇，也为推广普及我国冰雪运动提供了良好机遇。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	</div>
-	<script>
-		window.onload=function () {
-			var oNews=document.getElementById("news");
-			var outer=null;
-			oNews.onmouseover=function() {
-				clearInterval(outer)
-			}
-			oNews.onmouseout=function () {
-				outer=window.setInterval(function() {
-					var now=oNews.scrollLeft
-					oNews.scrollLeft++
-					if(now==oNews.scrollLeft){
-						oNews.innerHTML+=oNews.innerHTML
-					}
-				},10)
-			}
-			;(oNews.onmouseout)()
-		}
 
-		
-	</script>
+<body>
+    <div id="txt_box">
+        <span id="txt_main">习近平指出，筹办北京冬奥会、冬残奥会，为推动京津冀协同发展提供了良好机遇，也为推广普及我国冰雪运动提供了良好机遇.&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="txt_tmp"></span>
+    </div>
+    <script>
+    window.onload = function() {
+        var txtBox = document.getElementById('txt_box');
+        var txtMain = document.getElementById('txt_main');
+        var txtTmp = document.getElementById('txt_tmp');
+        var timer = undefined;
+
+        var SPEED = 30;
+
+        txtTmp.innerText = txtMain.innerText;
+
+        txtBox.onmouseover = function() {
+            clearInterval(timer);
+        };
+
+        txtBox.onmouseout = function() {
+            move(SPEED);
+        };
+
+        function move(speed) {
+            timer = setInterval(function() {
+                if (txtTmp.offsetWidth - txtBox.scrollLeft <= 0) {
+                    txtBox.scrollLeft = 0;
+                } else {
+                    txtBox.scrollLeft += 2;
+                }
+            }, speed)
+        };
+
+        move(SPEED);
+    };
+    </script>
 </body>
+
 </html>
