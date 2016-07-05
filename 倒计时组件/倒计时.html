@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	可接受的时间类型：<br>
+		标准Date时间类型 <br>
+		标准时间字符串 <br>
+		距离1970年1月1日8点钟的毫秒数 <br>
+		只含"年""月""日""时""分""秒"的字符串或数组<br>
+		只含"年""月""日""时""分"的字符串或数组<br>
+		只含"年""月""日"的字符串或数组<br>
+		只含"时""分""秒"的字符串或数组<br>
+		只含"时""分"的字符串或数组<br>
+<hr>
+Timer接收四个参数，父元素、时间、[回调]、[间隔时间] <br>
+例：new Timer("#test1",[12,34,0]) 
+<button onclick='javascript:new Timer("#test1",[12,34,0]);this.disabled="true"'>执行</button><br>
+例：new Timer("#test2","还多久2016年7月10日？",function(time){console.log(time)});
+<button onclick='javascript:new Timer("#test2","还多久2016年7月10日？",function(time){console.log(time)});this.disabled="true"'>执行</button><br>
+例：new Timer("#test3","2016-7-6 10:00",function(time){console.log("五秒过去了")},5000);
+<button onclick='javascript:new Timer("#test3","2016-7-6 10:00",function(time){console.log("五秒过去了")},5000);this.disabled="true"'>执行</button>
+<hr>
+<div id="test1"></div>
+<div id="test2"></div>
+<div id="test3"></div>
+<script src="timer.js"></script>
+</body>
+</html>

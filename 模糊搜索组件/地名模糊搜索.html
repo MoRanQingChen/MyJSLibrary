@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin: 0;padding: 0;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		width: 173px;height: 25px;text-align: center;background-color: #efe;
+	}
+</style>
+<body>
+	使用方法： <br>
+	写好input搜索框和ul的样式，new Search <br>
+	接收三个参数：指定input、ul、数据 <br>
+	例:new Search("#input","ul",city)  <button onclick='javascript:new Search("#input","ul",city);this.disabled="true"'>执行</button><br>
+
+<br>
+	<input  id="input" type="text">
+	<ul id="ul" ></ul>
+
+<script src="search.js"></script>
+<script src="city.js"></script>
+</body>
+</html>
